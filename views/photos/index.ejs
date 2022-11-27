@@ -1,0 +1,14 @@
+<%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/home.css">
+<%- include('../partials/nav') %>
+<body>
+  <ul>
+    <% photos.forEach(photo => { %>
+    <li>
+      <%= photo.names %>
+    </li>
+    <% }) %>
+  </ul>
+  <h1>this works</h1>
+</body>
+<%- include('../partials/footer') %>

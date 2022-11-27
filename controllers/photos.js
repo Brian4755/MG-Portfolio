@@ -1,12 +1,12 @@
 import { Photo } from '../models/photo.js'
 
 function index(req, res) {
-  res.render('photos/index', {
-    Photos
-  })
-  .catch(err => {
-    console.log(err)
-    res.redirect('/')
+  Photo.find({})
+  .then(photos => {
+    res.render('photos/index', {
+      photos,
+      title: 'Photos'
+    })
   })
 }
 
